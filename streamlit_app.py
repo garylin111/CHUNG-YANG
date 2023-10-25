@@ -66,7 +66,7 @@ if uploaded_file is not None:
 
 
         if change:
-            df.rename(columns={'天': '總產出', '日班': '日產出', '夜班': '夜產出'}, inplace=True)
+            df.rename(columns={'天': '總產出', '早': '日產出', '夜': '夜產出'}, inplace=True)
         if zero:
             df = df.fillna(0)
         if drop:
