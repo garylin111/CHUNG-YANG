@@ -15,7 +15,7 @@ logo = Image.open('LOGO.png')
 st.sidebar.image(logo, width=120)
 st.title('自動化報表')
 NG_file = st.sidebar.file_uploader("上傳不良回饋歷史記錄", type=['xls', 'xlsx'])
-uploaded_file = st.sidebar.file_uploader("上傳產出歷程報表", type=["xls", "xlsx"])
+uploaded_file = st.sidebar.file_uploader("上傳產出歷程報表（新版）", type=["xls", "xlsx"])
 machine_file = st.sidebar.file_uploader("上傳機台數據", type=["xls", "xlsx"])
 
 # 各廠區機台編號
@@ -66,7 +66,7 @@ if uploaded_file is not None:
 
 
         if change:
-            df.rename(columns={'天': '總產出', '早': '日產出', '夜': '夜產出'}, inplace=True)
+            df.rename(columns={'天': '總產出', '日班': '日產出', '夜班': '夜產出'}, inplace=True)
         if zero:
             df = df.fillna(0)
         if drop:
