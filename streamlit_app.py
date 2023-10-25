@@ -11,7 +11,7 @@ from PIL import Image
 
 # 接收xls格式數據
 st.set_page_config(page_title="總產出可視化", page_icon="📈")
-logo = Image.open(r'C:\Users\asus\Desktop\中陽實業\LOGO.png')
+logo = Image.open('LOGO.png')
 st.sidebar.image(logo, width=120)
 st.title('自動化報表')
 NG_file = st.sidebar.file_uploader("上傳不良回饋歷史記錄", type=['xls', 'xlsx'])
