@@ -70,7 +70,7 @@ if uploaded_file is not None:
         if zero:
             df = df.fillna(0)
         if drop:
-            df = df.drop(columns=['部門名稱', '大夜'])
+            df = df.drop(columns=['部門名稱'])
         if wash:
             data_ng['歸屬日期'] = pd.to_datetime(data_ng['歸屬日期'])
             data_ng['狀態'] = data_ng['狀態'].replace('更新(刪除)', '刪除')
